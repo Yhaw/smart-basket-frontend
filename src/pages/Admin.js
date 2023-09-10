@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import './Admin.css';
 import io from 'socket.io-client';
-require('dotenv').config();
-
+ 
 const Admin = () => {
   const [productname, setproductname] = useState('');
   const [productPrice, setProductPrice] = useState('');
   const [productnumber, setproductnumber] = useState(''); // New state for Product Number
   const [products, setProducts] = useState([]);
-  const ip = process.env.IP;
+  const ip = process.env.REACT_APP_IP;
   const socket = io('http://'+ip+':8080'); 
   const handleproductnameChange = (e) => {
     setproductname(e.target.value);

@@ -5,11 +5,10 @@ import UserContext from '../UserContext';
 import io from 'socket.io-client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-require('dotenv').config();
-
+ 
 const Cart = () => {
   const navigate = useNavigate();
-  const ip = process.env.IP;
+  const ip = process.env.REACT_APP_IP;
   const socket = io('http://'+ip+':8080');  // Replace with your server endpoint
   const { userId } = useContext(UserContext);
   

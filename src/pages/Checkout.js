@@ -3,10 +3,9 @@ import './checkout.css';
 import io from 'socket.io-client';
 import html2pdf from 'html2pdf.js';
 import UserContext from '../UserContext';
-require('dotenv').config();
-
+ 
 const Checkout = () => {
-  const ip = process.env.IP;
+  const ip = process.env.REACT_APP_IP;
   const socket = io('http://'+ip+':8080'); // Replace with your server endpoint
 
   const [cartItems, setCartItems] = useState([]);
