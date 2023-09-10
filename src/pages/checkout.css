@@ -1,0 +1,72 @@
+.checkout {
+    font-family: Arial, sans-serif;
+    width: 520px; /* 30% increase */
+    margin: 0 auto;
+    font-size: 130%;
+  }
+  
+  .receipt-title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .receipt-info {
+    margin-bottom: 20px;
+  }
+  
+  .receipt-info-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .receipt-label {
+    font-weight: bold;
+    flex-basis: 100px;
+    margin-right: 10px;
+  }
+  
+  .receipt-value {
+    flex-basis: calc(100% - 100px);
+  }
+  
+  .cart-items {
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  tfoot td {
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  tfoot tr:last-child td {
+    border-top: 2px solid #ddd;
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
