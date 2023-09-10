@@ -18,13 +18,22 @@
     "react-scripts": "5.0.1",
     "socket.io-client": "^4.7.0",
     "socketio": "^1.0.0",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "pg": "^8.11.0",
+    "socket.io": "^4.7.0",
+    "uuid": "^9.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "shop": "concurrently \"node index.js\" \"npm start -- --host\""
+
   },
   "eslintConfig": {
     "extends": [
