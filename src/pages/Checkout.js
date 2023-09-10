@@ -3,9 +3,11 @@ import './checkout.css';
 import io from 'socket.io-client';
 import html2pdf from 'html2pdf.js';
 import UserContext from '../UserContext';
+require('dotenv').config();
 
 const Checkout = () => {
-  const socket = io('http://localhost:8080'); // Replace with your server endpoint
+  const ip = process.env.IP;
+  const socket = io('http://'+ip+':8080'); // Replace with your server endpoint
 
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);

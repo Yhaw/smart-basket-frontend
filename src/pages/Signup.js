@@ -2,6 +2,8 @@ import React, { useState,useContext } from 'react';
 import './signup.css';
 import { useNavigate } from 'react-router-dom';
 import UserContext from '../UserContext';
+require('dotenv').config()
+
 const Signup = () => {
   const [name, setCustomerName] = useState('');
   const [email, setCustomerEmail] = useState('');
@@ -9,7 +11,7 @@ const Signup = () => {
   const [cartnumber, setCartNumber] = useState('');
   const navigate = useNavigate();
   const { setUserId } = useContext(UserContext);
-
+  const ip = process.env.IP;
   const handleNameChange = (event) => {
     setCustomerName(event.target.value);
   };
@@ -37,7 +39,7 @@ const Signup = () => {
     };
 
     // Send form data to the server
-    fetch('http://localhost:3080/signup', {
+    fetch(ip + ':3080/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
